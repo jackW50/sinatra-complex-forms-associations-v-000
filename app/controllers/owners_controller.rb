@@ -35,5 +35,10 @@ class OwnersController < ApplicationController
    if !@owner.pets.empty?
      @owner.pets.clear
    end 
+   
+   @owner.update(params[:owner])
+   
+   if !params[:pet][:name].empty?
+     @owner.pets << Pet.create(params[:pet])
   end
 end
