@@ -1,8 +1,8 @@
 <h3>Pets</h3>
 
-<%@pets.each do |owner|%>
+<%@pets.each do |pet|%>
   <ul>
-    <a href="/owners/<%=owner.id%>"><li><%=owner.name%></li></a>
+    <a href="/owners/<%=pet.id%>"><li><%=pet.name%></li></a>
   </ul>
 <%end%>
 
