@@ -31,7 +31,6 @@ class OwnersController < ApplicationController
   end
 
   patch '/owners/:id' do 
-    #binding.pry 
     @owner = Owner.find(params[:id])
     if !@owner.pets.empty?
       @owner.pets.clear
