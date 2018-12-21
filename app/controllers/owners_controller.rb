@@ -32,5 +32,8 @@ class OwnersController < ApplicationController
 
   patch '/owners/:id' do 
    @owner = Owner.find(params[:id])
+   if !@owner.pets.empty?
+     @owner.pets.clear
+   end 
   end
 end
