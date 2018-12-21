@@ -16,6 +16,7 @@ class PetsController < ApplicationController
 
   get '/pets/:id' do 
     @pet = Pet.find(params[:id])
+    @pet_owner = @pet.owner
     erb :'/pets/show'
   end
 
