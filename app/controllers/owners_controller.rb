@@ -13,6 +13,8 @@ class OwnersController < ApplicationController
   post '/owners' do 
     binding.pry
     @owner = Owner.create(params[:owner])
+    if !params[:pet].empty?
+      @owner.pets << Pet.create(params[:pet])
   end
 
   get '/owners/:id/edit' do 
