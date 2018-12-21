@@ -2,4 +2,8 @@
 
 <form action="/owners/<%=@owner.id%>" metho=POST>
   <input type="hidden" name="_method" id="hidden" value="PATCH">
-  <input type="text" name="owner[name]" id="owner_name" value="<%=@owner.name%>"
+  <input type="text" name="owner[name]" id="owner_name" value="<%=@owner.name%>">
+  
+  <br>
+  
+  <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>"
