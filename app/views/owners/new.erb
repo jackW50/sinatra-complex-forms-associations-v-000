@@ -8,6 +8,7 @@
   <input type="text" name="owner[name]">
 
   <br>
+  
   <%@pets.each do |pet|%>
     <input type="checkbox" name="pets_id" value="<%=pet.id%>" id="pets_id">
   <%end%>
