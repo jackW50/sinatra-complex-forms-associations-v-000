@@ -15,6 +15,7 @@ class OwnersController < ApplicationController
     @owner = Owner.create(params[:owner])
     if !params[:pet].empty?
       @owner.pets << Pet.create(params[:pet])
+    end 
   end
 
   get '/owners/:id/edit' do 
