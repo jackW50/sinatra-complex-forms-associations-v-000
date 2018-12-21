@@ -9,8 +9,8 @@
 
   <br>
   <%@pets.each do |pet|%>
-  <input type="checkbox" name="pets_id" value="<%=pet.id%>" id="pets_id">
-  
+    <input type="checkbox" name="pets_id" value="<%=pet.id%>" id="pets_id">
+  <%end%>
   <br>
   
   <input type="text" name="pet[:name]" id="pet[:name]">
