@@ -33,6 +33,7 @@ class OwnersController < ApplicationController
     if !params[:owner].keys.include?("pet_ids")
       params[:owner][:pet_ids] = []
     end 
+    
     @owner = Owner.find(params[:id])
     @owner.update(params[:owner])
    
